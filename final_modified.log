@@ -1,0 +1,55 @@
+LTspice 24.1.4 for Windows
+Circuit: D:\jupyter\Practice\VLSI_final\final_modified.net
+Start Time: Sun Mar 30 18:08:28 2025
+Options: ALLOW_AMBIGUOUS_MODELS
+D:\jupyter\Practice\VLSI_final\final_modified.net(3): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M1 N002 Vin1 N004 N004 NMOS l=195.637n w=2.765u
+                       ^^^^
+D:\jupyter\Practice\VLSI_final\final_modified.net(4): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M5 N004 N005 0 0 NMOS l=311.761n w=5.341u
+                 ^^^^
+D:\jupyter\Practice\VLSI_final\final_modified.net(5): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M8 N005 N005 0 0 NMOS l=311.761n w=5.341u
+                 ^^^^
+D:\jupyter\Practice\VLSI_final\final_modified.net(7): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M3 N002 N002 N001 N001 PMOS l=279.969n w=13.338u
+                       ^^^^
+D:\jupyter\Practice\VLSI_final\final_modified.net(8): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M4 N003 N002 N001 N001 PMOS l=279.969n w=13.338u
+                       ^^^^
+D:\jupyter\Practice\VLSI_final\final_modified.net(11): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M2 N003 Vin2 N004 N004 NMOS l=195.637n w=2.765u
+                       ^^^^
+D:\jupyter\Practice\VLSI_final\final_modified.net(13): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M6 Vout N003 N001 N001 PMOS l=266.120n w=208.668u
+                       ^^^^
+D:\jupyter\Practice\VLSI_final\final_modified.net(14): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
+M7 Vout N005 0 0 NMOS l=365.443n w=76.311u
+                 ^^^^
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Instance "M1": Length shorter than recommended for a level 1 MOSFET.
+Instance "M1": Width narrower than recommended for a level 1 MOSFET.
+Instance "M5": Length shorter than recommended for a level 1 MOSFET.
+Instance "M5": Width narrower than recommended for a level 1 MOSFET.
+Instance "M8": Length shorter than recommended for a level 1 MOSFET.
+Instance "M8": Width narrower than recommended for a level 1 MOSFET.
+Instance "M2": Length shorter than recommended for a level 1 MOSFET.
+Instance "M2": Width narrower than recommended for a level 1 MOSFET.
+Instance "M7": Length shorter than recommended for a level 1 MOSFET.
+Instance "M3": Length shorter than recommended for a level 1 MOSFET.
+Instance "M4": Length shorter than recommended for a level 1 MOSFET.
+Instance "M6": Length shorter than recommended for a level 1 MOSFET.
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.214 seconds.
+
+Files loaded:
+D:\jupyter\Practice\VLSI_final\final_modified.net
+C:\Users\DELL\AppData\Local\LTspice\lib\cmp\standard.mos
+
+Gain: V(vout)=(76.8415009249dB,91.174663848°) at 10
+UGBW: mag(V(vout))=1 AT 69530.246381
+PM: ph(V(vout))=(39.0152575701dB,0°) at 69530.246381
