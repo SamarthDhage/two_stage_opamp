@@ -20,13 +20,13 @@ CC Vout N003 {CC}
 * .ac dec 100 10 1G
 .model NMOS NMOS ( kp = 100u vt0 = 0.4 lambda = 0.011 )
 .model PMOS PMOS ( kp = 50u vt0 = -0.4 lambda = 0.052 )
+.param W1={W1} L1={L1} W3={W3} L3={L3} W5={W5} L5={L5}
+.param W6={W6} L6={L6} W7={W7} L7={L7} IB={IB} CC={CC}
 .MEAS AC Gain FIND V(vout) AT 10Hz
 .meas AC UGBW WHEN mag(V(vout))=1
 .meas AC PM FIND ph(V(vout)) WHEN mag(V(vout))=1
 .OPTIONS ALLOW_AMBIGUOUS_MODELS
 * .op
-.param W1=12.326u L1=332.178n W3=14.823u L3=501.571n W5=19.840u L5=198.081n
-.param W6=317.237u L6=253.065n W7=144.039u L7=446.330n IB=10.603u CC=1.624p
 .meas TRAN P_M1 AVG (V(N002)-V(N004)) * Id(M1)
 .meas TRAN P_M2 AVG (V(N003)-V(N004)) * Id(M2)
 .meas TRAN P_M3 AVG (V(N002)-V(N001)) * Id(M3)

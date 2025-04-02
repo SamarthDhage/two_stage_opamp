@@ -32,6 +32,7 @@ for index, row in df.iterrows():
 
     for key, value in replacements.items():
         netlist_content = netlist_content.replace(key, value)
+    
 
     with open(netlist_file, "w") as file:
         file.write(netlist_content)

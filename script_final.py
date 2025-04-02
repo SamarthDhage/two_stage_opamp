@@ -15,7 +15,7 @@ LOG_FILE = "final_modified.log"
 CSV_FILE = "two_stage_opamp_results.csv"
 
 # Define random parameter sweep ranges
-NUM_SAMPLES = 10  # Limit total simulations
+NUM_SAMPLES = 750  # Limit total simulations
 def to_human_readable(value):
     """Convert value to human-readable format (with units)."""
     if value < 1e-9:
@@ -86,7 +86,7 @@ def modify_ltspice_netlist(W1, L1, W3, L3, W5, L5, W6, L6, W7, L7, IB, CC):
 def run_ltspice():
     cmd = f'"{LTSPICE_PATH}" -b {MODIFIED_NETLIST_FILE}'
     subprocess.run(cmd, shell=True)
-    time.sleep(0)
+    time.sleep(1)
     start_time = time.time()
     while not os.path.exists(LOG_FILE):
         if time.time() - start_time > 10:
@@ -100,7 +100,7 @@ def extract_ltspice_log():
     # Open the log file and read the last 3 lines
     with open(LOG_FILE, "r", encoding="utf-8", errors="replace") as file:
         # Go to the end of the file and get the last 3 lines
-        lines = file.readlines()[-3:]
+        lines = file.readlines()[-5:]
 
     # Join the last 3 lines to get the full content
     log_data = ''.join(lines)

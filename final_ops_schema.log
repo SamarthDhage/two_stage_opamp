@@ -1,6 +1,6 @@
 LTspice 24.1.4 for Windows
 Circuit: D:\jupyter\Practice\VLSI_final\final_ops_schema.net
-Start Time: Sun Mar 30 18:10:57 2025
+Start Time: Wed Apr  2 05:59:08 2025
 Options: ALLOW_AMBIGUOUS_MODELS
 D:\jupyter\Practice\VLSI_final\final_ops_schema.net(3): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
 M1 N002 Vin1 N004 N004 NMOS l={L1} w={W1}
@@ -39,21 +39,49 @@ Instance "M8": Width narrower than recommended for a level 1 MOSFET.
 Instance "M2": Length shorter than recommended for a level 1 MOSFET.
 Instance "M7": Length shorter than recommended for a level 1 MOSFET.
 Instance "M3": Length shorter than recommended for a level 1 MOSFET.
+Instance "M3": Width narrower than recommended for a level 1 MOSFET.
 Instance "M4": Length shorter than recommended for a level 1 MOSFET.
+Instance "M4": Width narrower than recommended for a level 1 MOSFET.
 Instance "M6": Length shorter than recommended for a level 1 MOSFET.
-Direct Newton iteration for .op point succeeded.
-Total elapsed time: 0.174 seconds.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+Gmin = 2.03704e-09
+Gmin = 2.18725e-10
+Gmin = 2.34854e-11
+Gmin = 2.52173e-12
+Gmin = 2.70769e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 0.558 seconds.
 
 Files loaded:
 D:\jupyter\Practice\VLSI_final\final_ops_schema.net
 C:\Users\DELL\AppData\Local\LTspice\lib\cmp\standard.mos
 
-Gain: V(vout)=(83.7383343517dB,90.6734354294°) at 10
-UGBW: mag(V(vout))=1 AT 153512.785097
-PM: ph(V(vout))=(38.7201220957dB,0°) at 153512.785097
-AREA_W1: W1 * L1=(-221.84443998dB,0°)
-AREA_W3: W3 * L3=(-228.995092806dB,0°)
-AREA_W5: W5 * L5=(-229.350351959dB,0°)
-AREA_W6: W6 * L6=(-210.565943135dB,0°)
-AREA_W7: W7 * L7=(-230.185533393dB,0°)
-TOTAL_AREA: AREA_W1 + AREA_W3 + AREA_W5 + AREA_W6 + AREA_W7=(-206.41720253dB,0°)
+P_M1: AVG(V(N002)-V(N004)) * Id(M1)=2.57279888426e-06 FROM 0 TO 0.001
+P_M2: AVG(V(N003)-V(N004)) * Id(M2)=2.86510941714e-06 FROM 0 TO 0.001
+P_M3: AVG(V(N002)-V(N001)) * Id(M3)=2.09563077648e-06 FROM 0 TO 0.001
+P_M4: AVG(V(N003)-V(N001)) * Id(M4)=1.5565636483e-06 FROM 0 TO 0.001
+P_M5: AVG(V(N004)) * Id(M5)=4.3561435447e-05 FROM 0 TO 0.001
+P_M6: AVG(V(Vout)-V(N001)) * Id(M6)=0.000572385558311 FROM 0 TO 0.001
+P_M7: AVG(V(Vout)) * Id(M7)=1.18575330912e-05 FROM 0 TO 0.001
+P_M8: AVG(V(N005)) * Id(M8)=4.77405169775e-06 FROM 0 TO 0.001
+Total_Power: P_M1 + P_M2 + P_M3 + P_M4 + P_M5 + P_M6 + P_M7 + P_M8=0.000641668681273
+SR_calc: IB/CC=22408707.8652
+AREA_W1: W1 * L1=3.82582935e-12
+AREA_W3: W3 * L3=2.457446787e-12
+AREA_W5: W5 * L5=2.774074019e-12
+AREA_W6: W6 * L6=6.3185197332e-11
+AREA_W7: W7 * L7=2.9805293199e-11
+TOTAL_AREA: AREA_W1 + AREA_W3 + AREA_W5 + AREA_W6 + AREA_W7=1.02047840687e-10

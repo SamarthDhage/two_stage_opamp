@@ -25,5 +25,24 @@ CC Vout N003 {CC}
 .meas AC PM FIND ph(V(vout)) WHEN mag(V(vout))=1
 .OPTIONS ALLOW_AMBIGUOUS_MODELS
 * .op
+*.param W1=13.458u L1=202.658n W3=12.855u L3=492.512n W5=19.283u L5=385.148n
+*.param W6=91.478u L6=219.456n W7=149.429u L7=460.599n IB=16.107u CC=1.663p
+*.meas TRAN P_M1 AVG (V(N002)-V(N004)) * Id(M1)
+*.meas TRAN P_M2 AVG (V(N003)-V(N004)) * Id(M2)
+*.meas TRAN P_M3 AVG (V(N002)-V(N001)) * Id(M3)
+*.meas TRAN P_M4 AVG (V(N003)-V(N001)) * Id(M4)
+*.meas TRAN P_M5 AVG (V(N004)) * Id(M5)
+*.meas TRAN P_M6 AVG (V(Vout)-V(N001)) * Id(M6)
+*.meas TRAN P_M7 AVG (V(Vout)) * Id(M7)
+*.meas TRAN P_M8 AVG (V(N005)) * Id(M8)
+*.meas TRAN Total_Power param P_M1 + P_M2 + P_M3 + P_M4 + P_M5 + P_M6 + P_M7 + P_M8
+* .tran 1u 1m
+.meas TRAN SR_calc PARAM IB/CC
+*.meas AREA_W1 PARAM W1 * L1
+*.meas AREA_W3 PARAM W3 * L3
+*.meas AREA_W5 PARAM W5 * L5
+*.meas AREA_W6 PARAM W6 * L6
+*.meas AREA_W7 PARAM W7 * L7
+*.meas TOTAL_AREA PARAM AREA_W1 + AREA_W3 + AREA_W5 + AREA_W6 + AREA_W7
 .backanno
 .end

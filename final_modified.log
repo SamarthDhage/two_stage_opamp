@@ -1,30 +1,30 @@
 LTspice 24.1.4 for Windows
 Circuit: D:\jupyter\Practice\VLSI_final\final_modified.net
-Start Time: Sun Mar 30 18:08:28 2025
+Start Time: Wed Apr  2 06:22:19 2025
 Options: ALLOW_AMBIGUOUS_MODELS
 D:\jupyter\Practice\VLSI_final\final_modified.net(3): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M1 N002 Vin1 N004 N004 NMOS l=195.637n w=2.765u
+M1 N002 Vin1 N004 N004 NMOS l=186.183n w=7.711u
                        ^^^^
 D:\jupyter\Practice\VLSI_final\final_modified.net(4): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M5 N004 N005 0 0 NMOS l=311.761n w=5.341u
+M5 N004 N005 0 0 NMOS l=270.194n w=5.519u
                  ^^^^
 D:\jupyter\Practice\VLSI_final\final_modified.net(5): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M8 N005 N005 0 0 NMOS l=311.761n w=5.341u
+M8 N005 N005 0 0 NMOS l=270.194n w=5.519u
                  ^^^^
 D:\jupyter\Practice\VLSI_final\final_modified.net(7): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M3 N002 N002 N001 N001 PMOS l=279.969n w=13.338u
+M3 N002 N002 N001 N001 PMOS l=437.142n w=23.061u
                        ^^^^
 D:\jupyter\Practice\VLSI_final\final_modified.net(8): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M4 N003 N002 N001 N001 PMOS l=279.969n w=13.338u
+M4 N003 N002 N001 N001 PMOS l=437.142n w=23.061u
                        ^^^^
 D:\jupyter\Practice\VLSI_final\final_modified.net(11): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M2 N003 Vin2 N004 N004 NMOS l=195.637n w=2.765u
+M2 N003 Vin2 N004 N004 NMOS l=186.183n w=7.711u
                        ^^^^
 D:\jupyter\Practice\VLSI_final\final_modified.net(13): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M6 Vout N003 N001 N001 PMOS l=266.120n w=208.668u
+M6 Vout N003 N001 N001 PMOS l=446.536n w=337.947u
                        ^^^^
 D:\jupyter\Practice\VLSI_final\final_modified.net(14): This model has multiple definitions. Choosing one for you, unwisely. (Note: Option "ALLOW_AMBIGUOUS_MODELS" is enabled.)
-M7 Vout N005 0 0 NMOS l=365.443n w=76.311u
+M7 Vout N005 0 0 NMOS l=309.570n w=39.266u
                  ^^^^
 solver = Normal
 Maximum thread count: 8
@@ -44,12 +44,25 @@ Instance "M3": Length shorter than recommended for a level 1 MOSFET.
 Instance "M4": Length shorter than recommended for a level 1 MOSFET.
 Instance "M6": Length shorter than recommended for a level 1 MOSFET.
 Direct Newton iteration for .op point succeeded.
-Total elapsed time: 0.214 seconds.
+Total elapsed time: 0.258 seconds.
 
 Files loaded:
 D:\jupyter\Practice\VLSI_final\final_modified.net
 C:\Users\DELL\AppData\Local\LTspice\lib\cmp\standard.mos
 
-Gain: V(vout)=(76.8415009249dB,91.174663848°) at 10
-UGBW: mag(V(vout))=1 AT 69530.246381
-PM: ph(V(vout))=(39.0152575701dB,0°) at 69530.246381
+P_M1: AVG(V(N002)-V(N004)) * Id(M1)=7.22142512562e-06 FROM 0 TO 0.001
+P_M2: AVG(V(N003)-V(N004)) * Id(M2)=7.40555386331e-06 FROM 0 TO 0.001
+P_M3: AVG(V(N002)-V(N001)) * Id(M3)=2.57882893833e-06 FROM 0 TO 0.001
+P_M4: AVG(V(N003)-V(N001)) * Id(M4)=2.0792017906e-06 FROM 0 TO 0.001
+P_M5: AVG(V(N004)) * Id(M5)=7.93824481364e-05 FROM 0 TO 0.001
+P_M6: AVG(V(Vout)-V(N001)) * Id(M6)=0.000384093627703 FROM 0 TO 0.001
+P_M7: AVG(V(Vout)) * Id(M7)=0.000114665885035 FROM 0 TO 0.001
+P_M8: AVG(V(N005)) * Id(M8)=1.14391206051e-05 FROM 0 TO 0.001
+Total_Power: P_M1 + P_M2 + P_M3 + P_M4 + P_M5 + P_M6 + P_M7 + P_M8=0.000608866091197
+SR_calc: IB/CC=19117007.6726
+AREA_W1: W1 * L1=1.435657113e-12
+AREA_W3: W3 * L3=1.0080931662e-11
+AREA_W5: W5 * L5=1.491200686e-12
+AREA_W6: W6 * L6=1.50905501592e-10
+AREA_W7: W7 * L7=1.215557562e-11
+TOTAL_AREA: AREA_W1 + AREA_W3 + AREA_W5 + AREA_W6 + AREA_W7=1.76068866673e-10
